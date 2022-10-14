@@ -1,7 +1,7 @@
 import operation
 import services
 
-client = services.tweepyClientV2.client
+client = services.clientV2.client
 enable = operation.add_like_enable
 query = operation.add_like_query
 count = operation.add_like_count
@@ -19,5 +19,5 @@ def addLike():
             break
         if tweet.text.startswith("RT") or tweet.text.startswith("@"):
             continue
-        client.like(tweet_id=tweet.id, user_auth=True)
+        client.like(tweet_id=tweet.id)
         execute_num = execute_num + 1

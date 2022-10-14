@@ -1,1 +1,1 @@
-from . import tweepyClientV2
+from . import clientV2

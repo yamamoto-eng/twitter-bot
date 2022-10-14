@@ -1,3 +1,3 @@
-from services.addLike import addLike
+from services.likes.addLike import addLike
 
 addLike()

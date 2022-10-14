@@ -1,4 +1,4 @@
 # add like
-add_like_enable = False
-add_like_query = "text"
-add_like_count = 0
+add_like_enable = True
+add_like_query = "エンジニア"
+add_like_count = 1
