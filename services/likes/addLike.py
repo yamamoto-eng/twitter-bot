@@ -1,10 +1,10 @@
-import operation
+import setting
 import services
 
 client = services.clientV2.client
-enable = operation.add_like_enable
-query = operation.add_like_query
-count = operation.add_like_count
+enable = setting.add_like_enable
+query = setting.add_like_query
+count = setting.add_like_count
 
 
 def addLike():
@@ -13,7 +13,7 @@ def addLike():
         return
 
     execute_num = 0
-    tweets = client.search_recent_tweets(query, max_results=100)[0]
+    tweets = client.search_recent_tweets(query, max_results=100).data
     for tweet in tweets:
         if count <= execute_num:
             break
