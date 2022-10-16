@@ -8,7 +8,6 @@ count = setting.delete_like_count
 
 
 def deleteLike():
-
     if enable == False:
         return
 

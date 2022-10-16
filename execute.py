@@ -13,10 +13,9 @@ def execute():
     deleteLike()
 
 
-schedule.every(600).seconds.do(execute)
+schedule.every(1800).seconds.do(execute)
 
 
-# 03 イベント実行
 while True:
     schedule.run_pending()
     sleep(1)
