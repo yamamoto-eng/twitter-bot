@@ -13,7 +13,7 @@ def execute():
     deleteLike()
 
 
-schedule.every(1800).seconds.do(execute)
+schedule.every(2).seconds.do(execute)
 
 
 while True:
