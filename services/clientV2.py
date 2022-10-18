@@ -11,7 +11,3 @@ client = tweepy.Client(
     os.getenv("ACCESS_TOKEN"),
     os.getenv("ACCESS_TOKEN_SECRET"),
 )
-
-user_id = client.get_user(
-    username=os.getenv("USER_NAME"),
-).data.id

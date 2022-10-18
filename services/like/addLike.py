@@ -1,6 +1,7 @@
 import setting
 import services
 import inspect
+import datetime
 
 client = services.clientV2.client
 enable = setting.add_like_enable
@@ -13,9 +14,11 @@ def addLike():
     if enable == False:
         return
 
-    print(inspect.currentframe().f_code.co_name)
+    now = datetime.datetime.now()
     execute_num = 1
     tweets = client.search_recent_tweets(query, max_results=100).data
+    print(now.strftime("%H時%M分"), inspect.currentframe().f_code.co_name)
+
     for tweet in tweets:
         if count < execute_num:
             break
