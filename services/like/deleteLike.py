@@ -24,6 +24,11 @@ def deleteLike():
     for liked_tweet in liked_tweets:
         if count < execute_num:
             break
-        client.unlike(liked_tweet.id)
-        print(execute_num, liked_tweet.text)
-        execute_num = execute_num + 1
+        try:
+            client.unlike(liked_tweet.id)
+            print("🚀", execute_num, "\n", liked_tweet.text)
+            execute_num = execute_num + 1
+        except:
+            print("\n--------------------------------------------------")
+            print("error")
+            print("--------------------------------------------------\n")
